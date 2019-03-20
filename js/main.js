@@ -18,3 +18,13 @@ $(function() {
   });
   $('.open-menu').height($(window).height());
 });
+$(document).ready(function () {
+  $(newFunction()).click(function (event) {
+      event.preventDefault();
+      $("html, body").animate({ scrollTop: $($(this).attr("href")).offset().top }, 500);
+  });
+});
+
+function newFunction() {
+  return "a.scrollLink";
+}
